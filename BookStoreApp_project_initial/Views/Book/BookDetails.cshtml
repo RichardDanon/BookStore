@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "_MainLayout";
+    ViewData["Title"] = "Book Details";
+}
+
+@model Book
+
+<style>
+    .btn-rectangle {
+    background-color: #007BFF; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5; 
+}
+
+.btn-rectangle:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #fff; /* White font color on hover */
+    text-decoration: none; /* Remove underline on hover for links */
+}
+</style>
+
+<h2>@Model.Title</h2>
+<p>Book Id: @Model.BookId</p>
+<p>Book ISBN: @Model.ISBN</p>
+<p>Book Genre: @Model.Genre</p>
+<p>Book Price: @Model.Price</p>
+@foreach (var author in ViewBag.Authors)
+{
+    if (Model.AuthorId == author.AuthorId)
+    {
+        <p>@author.FirstName @author.LastName</p>
+    }
+}
+
+<a asp-controller="Book" asp-action="Edit" asp-route-id="@Model.BookId" class="btn btn-primary btn-rectangle">Edit</a>
+<a asp-controller="Book" asp-action="Delete" asp-route-id="@Model.BookId" class="btn btn-primary btn-rectangle">Delete</a>
+<a asp-controller="Book" asp-action="List" class="btn btn-primary btn-rectangle">Back</a>
+
+
+
+
+
