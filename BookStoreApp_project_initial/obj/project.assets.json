@@ -2008,19 +2008,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hhichri\\.nuget\\packages\\": {}
+    "C:\\Users\\15147\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hhichri\\OneDrive - Champlain Regional College\\courses\\2023_420_N54_Azure\\Submissions\\Lab04\\BookStoreApp\\BookStoreApp.csproj",
+      "projectUniqueName": "D:\\Users\\15147\\Documents\\Azure Class\\Final_Project\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj",
       "projectName": "BookStoreApp",
-      "projectPath": "C:\\Users\\hhichri\\OneDrive - Champlain Regional College\\courses\\2023_420_N54_Azure\\Submissions\\Lab04\\BookStoreApp\\BookStoreApp.csproj",
-      "packagesPath": "C:\\Users\\hhichri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hhichri\\OneDrive - Champlain Regional College\\courses\\2023_420_N54_Azure\\Submissions\\Lab04\\BookStoreApp\\obj\\",
+      "projectPath": "D:\\Users\\15147\\Documents\\Azure Class\\Final_Project\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj",
+      "packagesPath": "C:\\Users\\15147\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\15147\\Documents\\Azure Class\\Final_Project\\BookStore\\BookStoreApp_project_initial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hhichri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\15147\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
