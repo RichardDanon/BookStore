@@ -1,0 +1,61 @@
+﻿@model Book
+@{
+    Layout = "_MainLayout";
+    ViewData["Title"] = "Edit Book";
+}
+
+<style>
+    .btn-rectangle {
+    background-color: #007BFF; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5; 
+}
+
+.btn-rectangle:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #fff; /* White font color on hover */
+    text-decoration: none; /* Remove underline on hover for links */
+}
+</style>
+
+<h1>Edit Book</h1>
+<form asp-controller="Book" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="BookId" />
+    <div class="mb-3">
+        <label asp-for="ISBN" class="form-label">ISBN</label>
+        <input asp-for="ISBN" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label">Title</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label">Price</label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="AuthorId" class="form-label">Author</label>
+        <select asp-for="AuthorId" class="form-control">
+            <option value="">Select an Author</option>
+            @foreach (var author in ViewBag.Authors)
+            {
+                <option value="@author.AuthorId">@author.FirstName @author.LastName</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="GenreId" class="form-label">Genre</label>
+        <select asp-for="GenreId" class="form-control">
+            <option value="">Select a Genre</option>
+            @foreach (var genre in ViewBag.Genres)
+            {
+                <option value="@genre.GenreId">@genre.Name</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-rectangle">Update</button>
+    <a asp-controller="Book" asp-action="Index" class="btn btn-primary btn-rectangle">Cancel</a>
+</form>
