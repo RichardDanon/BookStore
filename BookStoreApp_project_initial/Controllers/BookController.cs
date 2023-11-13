@@ -1,6 +1,5 @@
 ﻿using BookStoreApp.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,8 +8,13 @@ namespace BookStoreApp.Controllers
     public class BookController : Controller
     {
 
-        private BookstoreContext context { get; set; }
-        public BookController(BookstoreContext ctx) =>  context = ctx;
+        private BookstoreContext context;
+        public IWebHostEnvironment WebHostEnvironment { get; }
+        public BookController(BookstoreContext ctx, IWebHostEnvironment WHENV)
+        {
+            context = ctx;
+            WebHostEnvironment = WHENV;
+        }
         public IActionResult Index(int page = 1, int pageSize = 5, int selectedGenreId = 0)
         {
 			int skip = (page - 1) * pageSize;
@@ -58,6 +62,80 @@ namespace BookStoreApp.Controllers
             Book book = context.Books.Where(b => b.BookId == id)
             .FirstOrDefault() ?? new Book();
             return View(book);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            ViewBag.Authors = context.Authors
+                    .OrderBy(p => p.AuthorId).ToList();
+            ViewBag.Genres = context.Genres
+                    .OrderBy(p => p.GenreId).ToList();
+
+            var books = context.Books
+                                        .OrderBy(b => b.BookId).ToList();
+
+            Book book = context.Books
+                        .Where(b => b.BookId == id)
+                        .OrderBy(b => b.BookId)
+                        .FirstOrDefault();
+
+            // use ViewBag to pass data to view
+            ViewBag.books = books;
+            ViewBag.SelectedBook = id;
+
+            // bind products to view
+            return View(book);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Book model)
+        {
+            ViewBag.Authors = context.Authors
+                    .OrderBy(p => p.AuthorId).ToList();
+            ViewBag.Genres = context.Genres
+                    .OrderBy(p => p.GenreId).ToList();
+
+            var books = context.Books
+                                        .OrderBy(b => b.BookId).ToList();
+
+            /*if (ModelState.IsValid)
+            {*/
+            // Assuming "context" is your database context
+            var existingBook = context.Books.FirstOrDefault(b => b.BookId == model.BookId);
+
+                if (existingBook != null)
+                {
+                    // Update the properties of the existing BlogPost
+                    existingBook.ISBN = model.ISBN;
+                    existingBook.Title = model.Title;
+                    existingBook.Price = model.Price;
+                    existingBook.AuthorId=model.AuthorId;
+                    existingBook.GenreId = model.GenreId;
+
+                    foreach(var author in ViewBag.Authors)
+                    {
+                        if (model.AuthorId == author.AuthorId)
+                        {
+                            existingBook.authorObject= author;
+                        }
+                    }
+
+                    foreach (var genre in ViewBag.Genres)
+                    {
+                        if (model.GenreId == genre.GenreId)
+                        {
+                            existingBook.Genre = genre;
+                        }
+                    }
+
+                    context.SaveChanges();
+
+                    return RedirectToAction("Index");
+                }
+            //}
+
+            return View("Edit", model);
         }
     }
 }
