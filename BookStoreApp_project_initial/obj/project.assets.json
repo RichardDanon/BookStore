@@ -2008,19 +2008,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\caleb\\.nuget\\packages\\": {}
+    "C:\\Users\\15147\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\caleb\\Documents\\Semester 5\\Azure with ASP.NET & MVC\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj",
+      "projectUniqueName": "D:\\Users\\15147\\Documents\\Azure Class\\Final_Project\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj",
       "projectName": "BookStoreApp",
-      "projectPath": "C:\\Users\\caleb\\Documents\\Semester 5\\Azure with ASP.NET & MVC\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj",
-      "packagesPath": "C:\\Users\\caleb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\caleb\\Documents\\Semester 5\\Azure with ASP.NET & MVC\\BookStore\\BookStoreApp_project_initial\\obj\\",
+      "projectPath": "D:\\Users\\15147\\Documents\\Azure Class\\Final_Project\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj",
+      "packagesPath": "C:\\Users\\15147\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\15147\\Documents\\Azure Class\\Final_Project\\BookStore\\BookStoreApp_project_initial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\caleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\15147\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2080,7 +2080,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -370,3 +370,10 @@ BookStoreApp_project_initial/.vs/BookStoreApp/v17/.suo
 *.props
 *.json
 *.editorconfig
+BookStoreApp_project_initial/obj/BookStoreApp.csproj.nuget.g.props
+*.vsidx
+*.lock
+*.props
+BookStoreApp_project_initial/obj/Debug/net6.0/project.razor.vs.json
+BookStoreApp_project_initial/obj/Debug/net6.0/BookStoreApp.GeneratedMSBuildEditorConfig.editorconfig
+BookStoreApp_project_initial/obj/project.nuget.cache
