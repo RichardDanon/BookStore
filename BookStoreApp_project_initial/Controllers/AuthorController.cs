@@ -32,6 +32,5 @@ namespace BookStoreApp.Controllers
 			return View(pagedList);
 		}
 
-		// Additional actions like Create, Edit, Details, Delete could be added here
 	}
 }
