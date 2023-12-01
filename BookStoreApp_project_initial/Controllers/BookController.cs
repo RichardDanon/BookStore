@@ -58,11 +58,84 @@ namespace BookStoreApp.Controllers
 		{
 			ViewBag.Authors = context.Authors
 					.OrderBy(p => p.AuthorId).ToList();
+            ViewBag.Genres = context.Genres.OrderBy(p => p.GenreId).ToList();
 
-			Book book = context.Books.Where(b => b.BookId == id)
+
+            Book book = context.Books.Where(b => b.BookId == id)
 			.FirstOrDefault() ?? new Book();
 			return View(book);
 		}
+
+		[HttpGet]
+        public IActionResult EditConfirmedGet(Book model)
+        {
+            ViewBag.Authors = context.Authors.OrderBy(p => p.AuthorId).ToList();
+            ViewBag.Genres = context.Genres.OrderBy(p => p.GenreId).ToList();
+
+            foreach (var author in ViewBag.Authors)
+            {
+                if (model.AuthorId == author.AuthorId)
+                {
+                    model.authorObject = author;
+                }
+            }
+
+            foreach (var genre in ViewBag.Genres)
+            {
+                if (model.GenreId == genre.GenreId)
+                {
+                    model.Genre = genre;
+                }
+            }
+
+            return View("EditConfirmed", model);
+        }
+
+        [HttpPost]
+		public IActionResult EditConfirmedPost(Book model)
+		{
+            ViewBag.Authors = context.Authors.OrderBy(p => p.AuthorId).ToList();
+            ViewBag.Genres = context.Genres.OrderBy(p => p.GenreId).ToList();
+
+            var books = context.Books
+                                        .OrderBy(b => b.BookId).ToList();
+
+            // Assuming "context" is your database context
+            var existingBook = context.Books.FirstOrDefault(b => b.BookId == model.BookId);
+
+            if (existingBook != null)
+            {
+                // Update the properties of the existing BlogPost
+                existingBook.ISBN = model.ISBN;
+                existingBook.Title = model.Title;
+                existingBook.Price = model.Price;
+                existingBook.AuthorId = model.AuthorId;
+                existingBook.GenreId = model.GenreId;
+
+                foreach (var author in ViewBag.Authors)
+                {
+                    if (model.AuthorId == author.AuthorId)
+                    {
+                        existingBook.authorObject = author;
+                    }
+                }
+
+                foreach (var genre in ViewBag.Genres)
+                {
+                    if (model.GenreId == genre.GenreId)
+                    {
+                        existingBook.Genre = genre;
+                    }
+                }
+
+                context.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+            return View(model);
+		}
+
 
 		[HttpGet]
 		public IActionResult Edit(int id)
@@ -86,56 +159,6 @@ namespace BookStoreApp.Controllers
 
 			// bind products to view
 			return View(book);
-		}
-
-		[HttpPost]
-		public IActionResult Edit(Book model)
-		{
-			ViewBag.Authors = context.Authors
-					.OrderBy(p => p.AuthorId).ToList();
-			ViewBag.Genres = context.Genres
-					.OrderBy(p => p.GenreId).ToList();
-
-			var books = context.Books
-										.OrderBy(b => b.BookId).ToList();
-
-			if (ModelState.IsValid)
-			{
-				// Assuming "context" is your database context
-				var existingBook = context.Books.FirstOrDefault(b => b.BookId == model.BookId);
-
-				if (existingBook != null)
-				{
-					// Update the properties of the existing BlogPost
-					existingBook.ISBN = model.ISBN;
-					existingBook.Title = model.Title;
-					existingBook.Price = model.Price;
-					existingBook.AuthorId = model.AuthorId;
-					existingBook.GenreId = model.GenreId;
-
-					foreach (var author in ViewBag.Authors)
-					{
-						if (model.AuthorId == author.AuthorId)
-						{
-							existingBook.authorObject = author;
-						}
-					}
-
-					foreach (var genre in ViewBag.Genres)
-					{
-						if (model.GenreId == genre.GenreId)
-						{
-							existingBook.Genre = genre;
-						}
-					}
-
-					context.SaveChanges();
-
-					return RedirectToAction("Index");
-				}
-			}
-
-			return View("Edit", model);
 		}
 
 		[HttpGet]

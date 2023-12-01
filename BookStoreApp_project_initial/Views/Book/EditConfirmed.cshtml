@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "_MainLayout";
+    ViewData["Title"] = "Book Edit Confirmation";
+}
+
+@model Book
+
+<style>
+    .btn-rectangle {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5;
+    }
+
+        .btn-rectangle:hover {
+            background-color: #0056b3;
+            color: #fff;
+            text-decoration: none;
+        }
+</style>
+
+<h1>Edit book?</h1>
+<form asp-controller="Book" asp-action="EditConfirmedPost" method="post">
+
+    <input type="hidden" asp-for="BookId" />
+    <div class="mb-3">
+        <label asp-for="ISBN" class="form-label">ISBN</label>
+        <input asp-for="ISBN" class="form-control" readonly />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label">Title</label>
+        <input asp-for="Title" class="form-control" readonly />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label">Price</label>
+        <input asp-for="Price" class="form-control" readonly />
+    </div>
+    <div class="mb-3">
+        <label asp-for="AuthorId" class="form-label">Author</label>
+        <input type="hidden" asp-for="AuthorId" />
+        <input value="@Model.authorObject.FirstName @Model.authorObject.LastName" class="form-control" readonly />
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="GenreId" class="form-label">Genre</label>
+        <input type="hidden" asp-for="GenreId" />
+        <input value="@Model.Genre.Name" class="form-control" readonly />
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-rectangle">Save</button>
+    <a asp-controller="Book" asp-action="Index" class="btn btn-primary btn-rectangle">Cancel</a>
+</form>

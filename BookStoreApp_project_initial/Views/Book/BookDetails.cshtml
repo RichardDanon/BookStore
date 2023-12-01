@@ -24,7 +24,13 @@
 <h2>@Model.Title</h2>
 <p>Book Id: @Model.BookId</p>
 <p>Book ISBN: @Model.ISBN</p>
-<p>Book Genre: @Model.Genre</p>
+@foreach (var genre in ViewBag.Genres)
+{
+    if (Model.GenreId == genre.GenreId)
+    {
+        <p>Book Genre: @genre.Name</p>
+    }
+}
 <p>Book Price: @Model.Price</p>
 @foreach (var author in ViewBag.Authors)
 {
