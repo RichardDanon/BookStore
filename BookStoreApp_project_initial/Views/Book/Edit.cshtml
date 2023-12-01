@@ -21,7 +21,7 @@
 </style>
 
 <h1>Edit Book</h1>
-<form asp-controller="Book" asp-action="Edit" method="post">
+<form asp-controller="Book" asp-action="EditConfirmedGet" method="get">
     <input type="hidden" asp-for="BookId" />
     <div class="mb-3">
         <label asp-for="ISBN" class="form-label">ISBN</label>
