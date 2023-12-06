@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caleb\\Documents\\Semester 5\\Azure with ASP.NET & MVC\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caleb\\Documents\\Semester 5\\Azure with ASP.NET & MVC\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj": {
+    "C:\\Users\\Admin\\Desktop\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caleb\\Documents\\Semester 5\\Azure with ASP.NET & MVC\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj",
         "projectName": "BookStoreApp",
-        "projectPath": "C:\\Users\\caleb\\Documents\\Semester 5\\Azure with ASP.NET & MVC\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj",
-        "packagesPath": "C:\\Users\\caleb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caleb\\Documents\\Semester 5\\Azure with ASP.NET & MVC\\BookStore\\BookStoreApp_project_initial\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\BookStore\\BookStoreApp_project_initial\\BookStoreApp.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\BookStore\\BookStoreApp_project_initial\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\caleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -74,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

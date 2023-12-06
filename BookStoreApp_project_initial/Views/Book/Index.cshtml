@@ -8,8 +8,8 @@
 }
 
 <div>
-	<h2>Book Catalog</h2>
-	<form method="get" asp-action="Index" asp-controller="Book">
+	<h2 style="padding-left: 5%; padding-right: 5%; ">Book Catalog</h2>
+	<form style="padding-left: 5%; padding-right: 5%; " method="get" asp-action="Index" asp-controller="Book">
 		<table style="border=0">
 			<tr>
 				<td>  <label for="selectedGenreId">Search by Genre:</label>  </td>
@@ -65,7 +65,7 @@
 		}
 	</tbody>
 </table>
-<div class="text-center">
+<div style="padding-left: 5%; padding-right: 5%; " class="text-center">
 	<pager asp-action="BookList" asp-controller="BookController" asp-route-page="@Model.PageResult.PageNumber" asp-route-pageSize="@Model.PageResult.PageSize" asp-route-totalItemCount="@Model.PageResult.TotalCount" id="bookPager">
 		<ul class="pagination">
 			<li class="page-item @((Model.PageResult.PageNumber == 1) ? "disabled" : "")">

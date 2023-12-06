@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookStoreApp.Models
 {
-    public class BookstoreContext : DbContext
+    public class BookstoreContext : IdentityDbContext<User>
+
     {
         public BookstoreContext(DbContextOptions<BookstoreContext> options) : base(options) { }
 
@@ -23,7 +25,7 @@ namespace BookStoreApp.Models
 		  new Genre { GenreId = 6, Name = "history" },
 		  new Genre { GenreId = 7, Name = "Fantasy" }
 
-	  );
+			);
 
 			modelBuilder.Entity<Book>().HasData(
 				new Book
