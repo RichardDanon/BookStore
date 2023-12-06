@@ -1,9 +1,11 @@
 ﻿using BookStoreApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStoreApp.Controllers
 {
+	[Authorize]
 	public class AuthorController : Controller
 	{
 		private readonly BookstoreContext context;
