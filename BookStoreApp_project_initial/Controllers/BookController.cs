@@ -189,5 +189,13 @@ namespace BookStoreApp.Controllers
 
 			return View("Delete", book);
 		}
-	}
+
+		[HttpGet]
+		public IActionResult StaffPick(string title)
+		{
+
+			Book book = context.Books.Where(b => b.Title == title).Include(b => b.Genre).Include(b => b.authorObject).FirstOrDefault() ?? new Book();
+			return View(book);
+		}
+    }
 }
