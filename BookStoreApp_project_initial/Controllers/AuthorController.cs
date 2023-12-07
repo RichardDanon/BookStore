@@ -87,34 +87,47 @@ namespace BookStoreApp.Controllers
         }
 
 
-        [HttpGet]
-        public IActionResult Delete(int id)
-        {
-            var author = context.Authors.Find(id);
-            return View(author);
-        }
+		[HttpGet]
+		public IActionResult Delete(int id)
+		{
+			var author = context.Authors.Find(id);
+			if (author == null)
+			{
+				return NotFound();
+			}
 
-        [HttpPost]
-        public IActionResult Delete(Author author)
-        {
+			// Fetch related books
+			var books = context.Books
+				.Where(b => b.AuthorId == id)
+				.ToList();
 
-            if (author == null)
-            {
-                return NotFound();
-            }
+			var viewModel = new AuthorDeleteViewModel
+			{
+				Author = author,
+				RelatedBooks = books
+			};
 
-            var booksQuery = context.Books
-                .Where(b => b.AuthorId == author.AuthorId)
-                .ToList();
+			return View("DeleteConfirmation", viewModel);
+		}
 
-            context.Books.RemoveRange(booksQuery);
+		[HttpPost]
+		public IActionResult ConfirmDelete(int id)
+		{
+			var author = context.Authors.Find(id);
+			if (author == null)
+			{
+				return NotFound();
+			}
 
-            context.Authors.Remove(author);
+			// Remove related books and author
+			var books = context.Books.Where(b => b.AuthorId == id).ToList();
+			context.Books.RemoveRange(books);
+			context.Authors.Remove(author);
 
-            context.SaveChanges();
+			context.SaveChanges();
 
-            return RedirectToAction("Index", "Author");
-        }
+			return RedirectToAction("Index", "Author");
+		}
 
-    }
+	}
 }
