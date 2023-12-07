@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Numerics;
 using System.Text.Json;
+using NToastNotify;
 
 namespace BookStoreApp.Controllers
 {
@@ -15,13 +16,16 @@ namespace BookStoreApp.Controllers
         private UserManager<User> userManager;
         private BookstoreContext context;
         private SignInManager<User> signInManager;
+        private readonly IToastNotification _toastNotification;
+
 
         public CartController(BookstoreContext ctx,UserManager<User> userMngr,
-            SignInManager<User> signInMngr)
+            SignInManager<User> signInMngr, IToastNotification toastNotification)
         {
             userManager = userMngr;
             signInManager = signInMngr;
             context = ctx;
+            _toastNotification = toastNotification;
         }
 
         public IActionResult CartView()
@@ -84,10 +88,16 @@ namespace BookStoreApp.Controllers
                 SaveUserCartToCookie(userCart);
             }
 
-            return NoContent();
+            Book book = context.Books.Where(b => b.BookId == id).FirstOrDefault();
+            string title = book.Title;
 
+            string message = $"Added '{title}' to your Cart";
 
-        }
+            _toastNotification.AddSuccessToastMessage(message);
+            return RedirectToAction("Index", "Book");
+            //return NoContent();
+
+		}
 
         private UserCart GetUserCartFromCookie()
         {
@@ -121,8 +131,14 @@ namespace BookStoreApp.Controllers
                 // Update the user's cart in the cookie
                 SaveUserCartToCookie(userCart);
 
+
+                Book book = context.Books.Where(b => b.BookId == id).FirstOrDefault();
+                string title = book.Title;
+
+                string message = $"Removed '{title}' from your Cart";
+
+                _toastNotification.AddSuccessToastMessage(message);
                 return RedirectToAction("CartView", "Cart");
-                
 
             }
             else { 

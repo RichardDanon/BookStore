@@ -1,6 +1,7 @@
 using BookStoreApp.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using NToastNotify;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,13 @@ builder.Services.AddDbContext<BookstoreContext>(options => options.UseSqlServer(
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<BookstoreContext>()
     .AddDefaultTokenProviders();
+
+    builder.Services.AddMvc().AddNToastNotifyNoty(new NotyOptions
+    {
+	    ProgressBar = true,
+	    Timeout = 5000,
+	    Theme = "mint"
+    });
 
 var app = builder.Build();
 
@@ -36,6 +44,7 @@ app.UseAuthorization();
 
 app.UseSession();
 
+app.UseNToastNotify();
 
 app.MapControllerRoute(
     name: "default",

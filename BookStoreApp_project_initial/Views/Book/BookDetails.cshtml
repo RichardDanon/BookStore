@@ -5,39 +5,46 @@
 
 @model Book
 
-<div class="container mt-4">
-    <div class="card">
-        <div class="card-header bg-primary text-white">
-            <h2>@Model.Title</h2>
-        </div>
-        <div class="card-body">
-            <p><strong>Book Id:</strong> @Model.BookId</p>
-            <p><strong>Book ISBN:</strong> @Model.ISBN</p>
-            <p>
-                <strong>Book Genre:</strong>
-                @foreach (var genre in ViewBag.Genres)
-                {
-                    if (Model.GenreId == genre.GenreId)
-                    {
-                        @genre.Name
-                    }
-                }
-            </p>
-            <p><strong>Book Price:</strong> @Model.Price</p>
-            <p>
-                <strong>Author:</strong>
-                @foreach (var author in ViewBag.Authors)
-                {
-                    if (Model.AuthorId == author.AuthorId)
-                    {
-                        @author.FirstName @author.LastName
-                    }
-                }
-            </p>
+<style>
+    .btn-rectangle {
+    background-color: #007BFF; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5; 
+}
 
-            <a asp-controller="Book" asp-action="Edit" asp-route-id="@Model.BookId" class="btn btn-warning me-2">Edit</a>
-            <a asp-controller="Book" asp-action="Delete" asp-route-id="@Model.BookId" class="btn btn-danger me-2">Delete</a>
-            <a asp-controller="Book" asp-action="Index" class="btn btn-secondary">Back</a>
-        </div>
-    </div>
-</div>
+.btn-rectangle:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #fff; /* White font color on hover */
+    text-decoration: none; /* Remove underline on hover for links */
+}
+</style>
+
+<h2>@Model.Title</h2>
+<p>Book Id: @Model.BookId</p>
+<p>Book ISBN: @Model.ISBN</p>
+@foreach (var genre in ViewBag.Genres)
+{
+    if (Model.GenreId == genre.GenreId)
+    {
+        <p>Book Genre: @genre.Name</p>
+    }
+}
+<p>Book Price: @Model.Price</p>
+@foreach (var author in ViewBag.Authors)
+{
+    if (Model.AuthorId == author.AuthorId)
+    {
+        <p>Book Author: @author.FirstName @author.LastName</p>
+    }
+}
+
+<a asp-controller="Book" asp-action="Edit" asp-route-id="@Model.BookId" class="btn btn-primary btn-rectangle">Edit</a>
+<a asp-controller="Book" asp-action="Delete" asp-route-id="@Model.BookId" class="btn btn-primary btn-rectangle">Delete</a>
+<a asp-controller="Book" asp-action="Index" class="btn btn-primary btn-rectangle">Back</a>
+
+
+
+
+
