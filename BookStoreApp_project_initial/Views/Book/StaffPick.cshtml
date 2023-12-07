@@ -1,0 +1,30 @@
+﻿@model Book
+
+@{
+    ViewBag.Title = "Staff Pick";
+}
+
+<div style="margin-left: 5%; margin-right: 5%; ">
+
+    <h2>Our Staff Pick : @Model.Title</h2>
+    <hr />
+    <p>Book Id: @Model.BookId</p>
+    <p>Book ISBN: @Model.ISBN</p>
+    <p>Book Price: @Model.Price</p>
+    <p>Book Author: @Model.authorObject.FirstName @Model.authorObject.LastName</p>
+    <p>Book Genre: @Model.Genre.Name</p>
+
+    <hr />
+
+    <div class="d-flex flex-row gap-2">
+        <form method="post" asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.BookId">
+			<button type="submit" class="btn btn-primary">
+				Add to cart
+			</button>
+        </form>
+
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-rectangle">Back</a>
+    </div>
+</div>
+
+
