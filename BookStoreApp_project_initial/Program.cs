@@ -7,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddMemoryCache();
+builder.Services.AddSession();
+
 builder.Services.AddDbContext<BookstoreContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("BookStoreContext")));
 
 builder.Services.AddIdentity<User, IdentityRole>()
@@ -30,6 +33,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseSession();
 
 
 app.MapControllerRoute(

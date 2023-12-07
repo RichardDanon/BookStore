@@ -1,0 +1,66 @@
+﻿<!--@@model List<Book>-->
+@model List<Book>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> signInManager
+
+@{
+    ViewBag.Title = "Cart";
+}
+
+
+<h2 style="margin-left: 5%; margin-right: 5%; "> @User.Identity.Name's Cart </h2>
+
+<hr style="margin-left: 5%; margin-right: 5%; " />
+
+<div style="margin-left: 5%; margin-right: 5%; ">
+    @{
+            if (Model == null)
+            {
+                <div>Cart Total : $0.00</div>
+            } else
+            {
+                var total = 0.00;
+                foreach(Book b in Model)
+                {
+                    total += b.Price;
+                }
+                <div>Cart Total : @total.ToString("C2")</div>
+            }
+    }</div>
+
+<hr style="margin-left: 5%; margin-right: 5%; " />
+
+<div style="margin-left: 5%; margin-right: 5%;" class="d-flex gap-3 flex-wrap">
+    @{
+
+        if(Model == null)
+        {
+            <div class="text-secondary">Empty Cart</div>
+        } 
+        else
+        {
+            foreach(Book b in Model)
+            {
+                <div style="border: 2px solid lightgray; width:400px;" class="bg-white shadow-sm px-4 py-4 " >
+                    <div>Book Id: @b.BookId</div>
+                    <div>Book ISBN: @b.ISBN</div>
+                    <div>Book Title: @b.Title</div>
+                    <div>Book Author: @b.authorObject.FirstName @b.authorObject.LastName</div>
+                    <div>Book price: @b.Price.ToString("C2")</div>
+                    <div>Book Genre: @b.Genre.Name</div>
+
+                    <hr style="margin-left: 3%; margin-right: 3%;" />
+
+                    
+                    <div>
+                        <a class="btn btn-primary" asp-action="RemoveBookFromCart" asp-controller="Cart" asp-route-id="@b.BookId">Remove From Cart</a>
+                    </div>
+                    
+                </div>
+                
+            }
+        }
+        
+}
+</div>
+

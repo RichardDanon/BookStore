@@ -34,8 +34,11 @@
 
         <div class="d-flex gap-3">
             
-            <img height="25px" width="25px" src="~/cart.png" style="color:white" />
-            <a class="textInNav">Cart</a>
+            @if (signInManager.IsSignedIn(User))
+            {
+                <img height="25px" width="25px" src="~/cart.png" style="color:white" />
+                <a asp-action="CartView" asp-controller="Cart" class="textInNav">Cart</a>
+            }
             
             @if (signInManager.IsSignedIn(User))
             {
