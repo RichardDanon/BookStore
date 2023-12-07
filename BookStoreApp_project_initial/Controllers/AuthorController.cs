@@ -54,23 +54,38 @@ namespace BookStoreApp.Controllers
             var author = context.Authors.Find(id);
             return View(author);
         }
+
         [HttpPost]
         public IActionResult Edit(Author author)
         {
             if (ModelState.IsValid)
             {
-                if (author.AuthorId == 0)
-                    context.Authors.Add(author);
-                else
-                    context.Authors.Update(author);
-                context.SaveChanges();
-                return RedirectToAction("Index", "Author");
+                return RedirectToAction("EditConfirmation", author);
             }
             else
             {
                 return View(author);
             }
         }
+
+        [HttpGet]
+        public IActionResult EditConfirmation(Author author)
+        {
+            return View(author);
+        }
+
+        [HttpPost]
+        public IActionResult ConfirmEdit(Author author)
+        {
+            if (author.AuthorId == 0)
+                context.Authors.Add(author);
+            else
+                context.Authors.Update(author);
+
+            context.SaveChanges();
+            return RedirectToAction("Index", "Author");
+        }
+
 
         [HttpGet]
         public IActionResult Delete(int id)
