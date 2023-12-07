@@ -188,7 +188,7 @@ namespace BookStoreApp.Models
 					GenreId = 3,
 					AuthorId = 15,
 					Title = "Romeo and Juliet",
-					ISBN = "978-0472345671",
+					ISBN = "978-0472-345671",
 					Price = 16.99
 				},
 				new Book
@@ -197,7 +197,7 @@ namespace BookStoreApp.Models
 					GenreId = 4,
 					AuthorId = 16,
 					Title = "The Shining",
-					ISBN = "978-0473456789",
+					ISBN = "978-04734567-89",
 					Price = 35.78
 				},
 				new Book
@@ -206,7 +206,7 @@ namespace BookStoreApp.Models
 					GenreId = 6,
 					AuthorId = 17,
 					Title = "A People's History of the United States",
-					ISBN = "978-9474567890",
+					ISBN = "978-94-74567890",
 					Price = 24.09
 				},
 				new Book
@@ -215,7 +215,7 @@ namespace BookStoreApp.Models
 					GenreId = 2,
 					AuthorId = 18,
 					Title = "Dune",
-					ISBN = "978-0475678901",
+					ISBN = "978-0475678-901",
 					Price = 19.99
 				},
 				new Book
@@ -224,7 +224,7 @@ namespace BookStoreApp.Models
 					GenreId = 1,
 					AuthorId = 19,
 					Title = "Pride and Prejudice",
-					ISBN = "978-0476789012",
+					ISBN = "978-047-6789012",
 					Price = 12.99
 				},
 				new Book
@@ -233,7 +233,7 @@ namespace BookStoreApp.Models
 					GenreId = 3,
 					AuthorId = 15,
 					Title = "Hamlet",
-					ISBN = "978-0477890123",
+					ISBN = "978-04778-90123",
 					Price = 50.89
 				},
 				new Book
@@ -242,7 +242,7 @@ namespace BookStoreApp.Models
 					GenreId = 4,
 					AuthorId = 20,
 					Title = "The Exorcist",
-					ISBN = "978-0478901234",
+					ISBN = "978-0478901-234",
 					Price = 14.99
 				},
 				new Book
@@ -251,7 +251,7 @@ namespace BookStoreApp.Models
 					GenreId = 6,
 					AuthorId = 21,
 					Title = "Sapiens: A Brief History of Humankind",
-					ISBN = "978-0479012345",
+					ISBN = "978-0479012-345",
 					Price = 15.99
 				},
 				new Book
@@ -260,7 +260,7 @@ namespace BookStoreApp.Models
 					GenreId = 2,
 					AuthorId = 22,
 					Title = "Neuromancer",
-					ISBN = "978-0470123456",
+					ISBN = "978-04701-23456",
 					Price = 21.25
 				},
 				new Book
@@ -269,7 +269,7 @@ namespace BookStoreApp.Models
 					GenreId = 1,
 					AuthorId = 23,
 					Title = "The Great Gatsby",
-					ISBN = "978-0471234567",
+					ISBN = "978-0471234-567",
 					Price = 60.99
 				},
 				new Book
@@ -278,7 +278,7 @@ namespace BookStoreApp.Models
 					GenreId = 3,
 					AuthorId = 15,
 					Title = "Macbeth",
-					ISBN = "978-0472345678",
+					ISBN = "978-047234-5678",
 					Price = 28
 				},
 				new Book
@@ -287,7 +287,7 @@ namespace BookStoreApp.Models
 					GenreId = 4,
 					AuthorId = 16,
 					Title = "It",
-					ISBN = "978-0473456789",
+					ISBN = "978-0473-456789",
 					Price = 16.50
 				},
 				new Book
@@ -296,7 +296,7 @@ namespace BookStoreApp.Models
 					GenreId = 6,
 					AuthorId = 14,
 					Title = "The Wright Brothers",
-					ISBN = "978-0474567890",
+					ISBN = "978-047456-7890",
 					Price = 32.99
 				},
 				new Book
@@ -305,7 +305,7 @@ namespace BookStoreApp.Models
 					GenreId = 2,
 					AuthorId = 15,
 					Title = "Foundation",
-					ISBN = "978-0475678901",
+					ISBN = "978-04756-78901",
 					Price = 13.99
 				},
 
@@ -313,7 +313,7 @@ namespace BookStoreApp.Models
 				{
 					BookId = 32,
 					Title = "The Lord of the Rings",
-					ISBN = "978-0476789012",
+					ISBN = "978-047678-9012",
 					GenreId = 7,
 					AuthorId = 14,
 					Price = 14.99
@@ -323,7 +323,7 @@ namespace BookStoreApp.Models
 				{
 					BookId = 33,
 					Title = "The Silmarillion",
-					ISBN = "978-0477890123",
+					ISBN = "978-047789-0123",
 					GenreId = 7,
 					AuthorId = 14,
 					Price = 17.99
@@ -335,7 +335,7 @@ namespace BookStoreApp.Models
 					GenreId = 1,
 					AuthorId = 19,
 					Title = "Love in the Night",
-					ISBN = "978-0478901234",
+					ISBN = "978-047890-1234",
 					Price = 18.99
 				},
 				new Book
@@ -344,7 +344,7 @@ namespace BookStoreApp.Models
 					GenreId = 1,
 					AuthorId = 23,
 					Title = "The Catcher in the Rye",
-					ISBN = "978-0479012345",
+					ISBN = "978-04790-12345",
 					Price = 13.67
 				}
 
