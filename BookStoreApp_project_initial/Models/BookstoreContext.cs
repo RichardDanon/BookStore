@@ -28,328 +28,318 @@ namespace BookStoreApp.Models
 			);
 
 			modelBuilder.Entity<Book>().HasData(
-				new Book
-				{
-					BookId = 1,
-					Title = "Carrie",
-					ISBN = "978-0-385-08695-0",
-					GenreId = 4,
-					AuthorId = 1,
-					Price = 14.94
-				},
-				new Book
-				{
-					BookId = 2,
-					Title = "Christine",
-					ISBN = "978-0-670-22026-7",
-					GenreId = 1,
-					AuthorId = 1,
-					Price = 17.99
-				},
+                new Book
+                {
+                    BookId = 1,
+                    Title = "Carrie",
+                    ISBN = "978-0-385-08695-0",
+                    GenreId = 4,
+                    AuthorId = 1,
+                    Price = 14.94
+                },
+                new Book
+                {
+                    BookId = 2,
+                    Title = "Christine",
+                    ISBN = "978-0-670-22026-7",
+                    GenreId = 1,
+                    AuthorId = 1,
+                    Price = 17.99
+                },
 
-				new Book
-				{
-					BookId = 3,
-					Title = "The Dark Tower: The Gunslinger",
-					ISBN = "978-0-937986-50-9",
-					GenreId = 1,
-					AuthorId = 1,
-					Price = 11.62
-				},
-				new Book
-				{
-					BookId = 4,
-					Title = "It",
-					ISBN = "0-670-81302-8",
-					GenreId = 4,
-					AuthorId = 1,
-					Price = 15.24
-				},
-				new Book
-				{
-					BookId = 5,
-					GenreId = 1,
-					AuthorId = 1,
-					Title = "Misery",
-					ISBN = "978-0-670-81364-3",
-					Price = 13.69
-				},
-				new Book
-				{
-					BookId = 6,
-					GenreId = 5,
-					AuthorId = 2,
-					Title = "The Murder of Roger Ackroyd",
-					ISBN = "978-0062073563",
-					Price = 14.99
-				},
-				new Book
-				{
-					BookId = 7,
-					GenreId = 5,
-					AuthorId = 2,
-					Title = "Peril at End House",
-					ISBN = "978-0062074027",
-					Price = 19.99
-				},
-				new Book
-				{
-					BookId = 8,
-					GenreId = 5,
-					AuthorId = 2,
-					Title = "Murder on the Orient Express",
-					ISBN = "978-0062073501",
-					Price = 11.99
-				},
-				new Book
-				{
-					BookId = 9,
-					GenreId = 5,
-					AuthorId = 2,
-					Title = "And Then There Were None",
-					ISBN = "978-0062073488",
-					Price = 12.99
-				},
-				new Book
-				{
-					BookId = 10,
-					GenreId = 5,
-					AuthorId = 2,
-					Title = "The ABC Murders",
-					ISBN = "978-0062073587",
-					Price = 20.87
-				},
-				new Book
-				{
-					BookId = 11,
-					GenreId = 3,
-					AuthorId = 3,
-					Title = "Safe Harbour",
-					ISBN = "978-1459745186",
-					Price = 12.99
-				},
-				new Book
-				{
-					BookId = 12,
-					GenreId = 1,
-					AuthorId = 3,
-					Title = "The Gift",
-					ISBN = "978-0552142458",
-					Price = 25.74
-				},
-				new Book
-				{
-					BookId = 13,
-					GenreId = 3,
-					AuthorId = 3,
-					Title = "All That Glitters",
-					ISBN = "978-0593339169",
-					Price = 27.80
-				},
-				new Book
-				{
-					BookId = 14,
-					GenreId = 1,
-					AuthorId = 3,
-					Title = "Finding Ashley",
-					ISBN = "978-1984821461",
-					Price = 24.73
-				},
-				new Book
-				{
-					BookId = 15,
-					GenreId = 3,
-					AuthorId = 3,
-					Title = "His Bright Light",
-					ISBN = "978-0385334679",
-					Price = 24.01
-				},
+                new Book
+                {
+                    BookId = 3,
+                    Title = "The Dark Tower: The Gunslinger",
+                    ISBN = "978-0-937986-50-9",
+                    GenreId = 1,
+                    AuthorId = 1,
+                    Price = 11.62
+                },
+                new Book
+                {
+                    BookId = 4,
+                    Title = "It",
+                    ISBN = "0-670-81302-8",
+                    GenreId = 4,
+                    AuthorId = 1,
+                    Price = 15.24
+                },
+                new Book
+                {
+                    BookId = 5,
+                    GenreId = 1,
+                    AuthorId = 1,
+                    Title = "Misery",
+                    ISBN = "978-0-670-81364-3",
+                    Price = 13.69
+                },
+                new Book
+                {
+                    BookId = 6,
+                    GenreId = 5,
+                    AuthorId = 2,
+                    Title = "The Murder of Roger Ackroyd",
+                    ISBN = "978-0062073563",
+                    Price = 14.99
+                },
+                new Book
+                {
+                    BookId = 7,
+                    GenreId = 5,
+                    AuthorId = 2,
+                    Title = "Peril at End House",
+                    ISBN = "978-0062074027",
+                    Price = 19.99
+                },
+                new Book
+                {
+                    BookId = 8,
+                    GenreId = 5,
+                    AuthorId = 2,
+                    Title = "Murder on the Orient Express",
+                    ISBN = "978-0062073501",
+                    Price = 11.99
+                },
+                new Book
+                {
+                    BookId = 9,
+                    GenreId = 5,
+                    AuthorId = 2,
+                    Title = "And Then There Were None",
+                    ISBN = "978-0062073488",
+                    Price = 12.99
+                },
+                new Book
+                {
+                    BookId = 10,
+                    GenreId = 5,
+                    AuthorId = 2,
+                    Title = "The ABC Murders",
+                    ISBN = "978-0062073587",
+                    Price = 20.87
+                },
+                new Book
+                {
+                    BookId = 11,
+                    GenreId = 3,
+                    AuthorId = 3,
+                    Title = "Safe Harbour",
+                    ISBN = "978-1459745186",
+                    Price = 12.99
+                },
+                new Book
+                {
+                    BookId = 12,
+                    GenreId = 1,
+                    AuthorId = 3,
+                    Title = "The Gift",
+                    ISBN = "978-0552142458",
+                    Price = 25.74
+                },
+                new Book
+                {
+                    BookId = 13,
+                    GenreId = 3,
+                    AuthorId = 3,
+                    Title = "All That Glitters",
+                    ISBN = "978-0593339169",
+                    Price = 27.80
+                },
+                new Book
+                {
+                    BookId = 14,
+                    GenreId = 1,
+                    AuthorId = 3,
+                    Title = "Finding Ashley",
+                    ISBN = "978-1984821461",
+                    Price = 24.73
+                },
+                new Book
+                {
+                    BookId = 15,
+                    GenreId = 3,
+                    AuthorId = 3,
+                    Title = "His Bright Light",
+                    ISBN = "978-0385334679",
+                    Price = 24.01
+                },
+                new Book
+                {
+                    BookId = 16,
+                    GenreId = 1,
+                    AuthorId = 14,
+                    Title = "To Kill a Mockingbird",
+                    ISBN = "978-0471234567",
+                    Price = 10.99
+                },
+                new Book
+                {
+                    BookId = 17,
+                    GenreId = 3,
+                    AuthorId = 15,
+                    Title = "Romeo and Juliet",
+                    ISBN = "978-0472-345671",
+                    Price = 16.99
+                },
+                new Book
+                {
+                    BookId = 18,
+                    GenreId = 4,
+                    AuthorId = 16,
+                    Title = "The Shining",
+                    ISBN = "978-04734567-89",
+                    Price = 35.78
+                },
+                new Book
+                {
+                    BookId = 19,
+                    GenreId = 6,
+                    AuthorId = 17,
+                    Title = "A People's History of the United States",
+                    ISBN = "978-94-74567890",
+                    Price = 24.09
+                },
+                new Book
+                {
+                    BookId = 20,
+                    GenreId = 2,
+                    AuthorId = 18,
+                    Title = "Dune",
+                    ISBN = "978-0475678-901",
+                    Price = 19.99
+                },
+                new Book
+                {
+                    BookId = 11,
+                    GenreId = 1,
+                    AuthorId = 19,
+                    Title = "Pride and Prejudice",
+                    ISBN = "978-047-6789012",
+                    Price = 12.99
+                },
+                new Book
+                {
+                    BookId = 22,
+                    GenreId = 3,
+                    AuthorId = 15,
+                    Title = "Hamlet",
+                    ISBN = "978-04778-90123",
+                    Price = 50.89
+                },
+                new Book
+                {
+                    BookId = 23,
+                    GenreId = 4,
+                    AuthorId = 20,
+                    Title = "The Exorcist",
+                    ISBN = "978-0478901-234",
+                    Price = 14.99
+                },
+                new Book
+                {
+                    BookId = 24,
+                    GenreId = 6,
+                    AuthorId = 21,
+                    Title = "Sapiens: A Brief History of Humankind",
+                    ISBN = "978-0479012-345",
+                    Price = 15.99
+                },
+                new Book
+                {
+                    BookId = 25,
+                    GenreId = 2,
+                    AuthorId = 22,
+                    Title = "Neuromancer",
+                    ISBN = "978-04701-23456",
+                    Price = 21.25
+                },
+                new Book
+                {
+                    BookId = 26,
+                    GenreId = 1,
+                    AuthorId = 23,
+                    Title = "The Great Gatsby",
+                    ISBN = "978-0471234-567",
+                    Price = 60.99
+                },
+                new Book
+                {
+                    BookId = 27,
+                    GenreId = 3,
+                    AuthorId = 15,
+                    Title = "Macbeth",
+                    ISBN = "978-047234-5678",
+                    Price = 28
+                },
+                new Book
+                {
+                    BookId = 28,
+                    GenreId = 4,
+                    AuthorId = 16,
+                    Title = "It",
+                    ISBN = "978-0473-456789",
+                    Price = 16.50
+                },
+                new Book
+                {
+                    BookId = 29,
+                    GenreId = 6,
+                    AuthorId = 14,
+                    Title = "The Wright Brothers",
+                    ISBN = "978-047456-7890",
+                    Price = 32.99
+                },
+                new Book
+                {
+                    BookId = 30,
+                    GenreId = 2,
+                    AuthorId = 15,
+                    Title = "Foundation",
+                    ISBN = "978-04756-78901",
+                    Price = 13.99
+                },
 
+                new Book
+                {
+                    BookId = 32,
+                    Title = "The Lord of the Rings",
+                    ISBN = "978-047678-9012",
+                    GenreId = 7,
+                    AuthorId = 14,
+                    Price = 14.99
+                },
 
+                new Book
+                {
+                    BookId = 33,
+                    Title = "The Silmarillion",
+                    ISBN = "978-047789-0123",
+                    GenreId = 7,
+                    AuthorId = 14,
+                    Price = 17.99
+                },
 
+                new Book
+                {
+                    BookId = 34,
+                    GenreId = 1,
+                    AuthorId = 19,
+                    Title = "Love in the Night",
+                    ISBN = "978-047890-1234",
+                    Price = 18.99
+                },
+                new Book
+                {
+                    BookId = 35,
+                    GenreId = 1,
+                    AuthorId = 23,
+                    Title = "The Catcher in the Rye",
+                    ISBN = "978-04790-12345",
+                    Price = 13.67
+                }
 
-
-
-
-
-
-				new Book
-				{
-					BookId = 16,
-					GenreId = 1,
-					AuthorId = 14,
-					Title = "To Kill a Mockingbird",
-					ISBN = "00000006",
-					Price = 10.99
-				},
-				new Book
-				{
-					BookId = 17,
-					GenreId = 3,
-					AuthorId = 15,
-					Title = "Romeo and Juliet",
-					ISBN = "00000007",
-					Price = 16.99
-				},
-				new Book
-				{
-					BookId = 18,
-					GenreId = 4,
-					AuthorId = 16,
-					Title = "The Shining",
-					ISBN = "00000008",
-					Price = 35.78
-				},
-				new Book
-				{
-					BookId = 19,
-					GenreId = 6,
-					AuthorId = 17,
-					Title = "A People's History of the United States",
-					ISBN = "00000009",
-					Price = 24.09
-				},
-				new Book
-				{
-					BookId = 20,
-					GenreId = 2,
-					AuthorId = 18,
-					Title = "Dune",
-					ISBN = "00000010",
-					Price = 19.99
-				},
-				new Book
-				{
-					BookId = 11,
-					GenreId = 1,
-					AuthorId = 19,
-					Title = "Pride and Prejudice",
-					ISBN = "00000011",
-					Price = 12.99
-				},
-				new Book
-				{
-					BookId = 22,
-					GenreId = 3,
-					AuthorId = 15,
-					Title = "Hamlet",
-					ISBN = "00000012",
-					Price = 50.89
-				},
-				new Book
-				{
-					BookId = 23,
-					GenreId = 4,
-					AuthorId = 20,
-					Title = "The Exorcist",
-					ISBN = "00000013",
-					Price = 14.99
-				},
-				new Book
-				{
-					BookId = 24,
-					GenreId = 6,
-					AuthorId = 21,
-					Title = "Sapiens: A Brief History of Humankind",
-					ISBN = "000000014",
-					Price = 15.99
-				},
-				new Book
-				{
-					BookId = 25,
-					GenreId = 2,
-					AuthorId = 22,
-					Title = "Neuromancer",
-					ISBN = "00000015",
-					Price = 21.25
-				},
-				new Book
-				{
-					BookId = 26,
-					GenreId = 1,
-					AuthorId = 23,
-					Title = "The Great Gatsby",
-					ISBN = "00000016",
-					Price = 60.99
-				},
-				new Book
-				{
-					BookId = 27,
-					GenreId = 3,
-					AuthorId = 15,
-					Title = "Macbeth",
-					ISBN = "00000017",
-					Price = 28
-				},
-				new Book
-				{
-					BookId = 28,
-					GenreId = 4,
-					AuthorId = 16,
-					Title = "It",
-					ISBN = "00000018",
-					Price = 16.50
-				},
-				new Book
-				{
-					BookId = 29,
-					GenreId = 6,
-					AuthorId = 14,
-					Title = "The Wright Brothers",
-					ISBN = "00000019",
-					Price = 32.99
-				},
-				new Book
-				{
-					BookId = 30,
-					GenreId = 2,
-					AuthorId = 15,
-					Title = "Foundation",
-					ISBN = "00000020",
-					Price = 13.99
-				},
-
-				new Book
-				{
-					BookId = 32,
-					Title = "The Lord of the Rings",
-					ISBN = "000092",
-					GenreId = 7,
-					AuthorId = 14,
-					Price = 14.99
-				},
-
-				 new Book
-				 {
-					 BookId = 33,
-					 Title = "The Silmarillion",
-					 ISBN = "000096",
-					 GenreId = 7,
-					 AuthorId = 14,
-					 Price = 17.99
-				 },
-
-
-				 new Book
-				 {
-					 BookId = 34,
-					 GenreId = 1,
-					 AuthorId = 19,
-					 Title = "Love in the Night",
-					 ISBN = "00000095",
-					 Price = 18.99
-				 },
-				 new Book
-				 {
-					 BookId = 35,
-					 GenreId = 1,
-					 AuthorId = 23,
-					 Title = "The Catcher in the Rye",
-					 ISBN = "00000097",
-					 Price = 13.67
-				 }
-
-			);
+            );
 
             modelBuilder.Entity<Author>().HasData(
 			   new Author

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "y+B/ai/DCE8BclHU0TdQtkCHxW3yezEtqfv7fks913o=",
+  "Hash": "nzUz4To8cIO5q0SZ4V4KZ3GZILGD7j8oYUPmVcPvAEw=",
   "Source": "BookStoreApp",
   "BasePath": "_content/BookStoreApp",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\ntoastnotify\\6.0.1\\staticwebassets\\noty.js",
+      "SourceId": "NToastNotify",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\ntoastnotify\\6.0.1\\staticwebassets\\",
+      "BasePath": "_content/NToastNotify",
+      "RelativePath": "noty.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\ntoastnotify\\6.0.1\\staticwebassets\\noty.js"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\ntoastnotify\\6.0.1\\staticwebassets\\toastr.js",
+      "SourceId": "NToastNotify",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\ntoastnotify\\6.0.1\\staticwebassets\\",
+      "BasePath": "_content/NToastNotify",
+      "RelativePath": "toastr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\ntoastnotify\\6.0.1\\staticwebassets\\toastr.js"
+    },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\BookStore\\BookStoreApp_project_initial\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BookStoreApp.styles.css",
       "SourceId": "BookStoreApp",
